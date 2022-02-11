@@ -6,4 +6,4 @@ Online Courses Website
 2. Payment/subscribe
 3. Tutorial(free)/Online video(pay)
 4. Exercises/Quizzes
-5. Profile - checking achivements from quizzes
+5. Profile - checking achivements from quizzes(for student) / update quizzes and answers(admin)
