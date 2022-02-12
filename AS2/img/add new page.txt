@@ -1,3 +1,0 @@
-ionic generate
-- page
-- name the page
