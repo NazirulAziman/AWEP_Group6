@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Homepage</title>
+</head>
+<style type="text/css">
+	body{
+		margin: 0;
+		scroll-behavior: smooth;
+	}
+	.wrap{
+		display: flex;
+		flex: wrap;
+	}
+
+	/*Side part*/
+	#side{
+		flex: 20%;
+		height: 100vh;
+		background-color: #081d54;
+		font-family: sans-serif;
+	}
+	#myHeader{
+		display: block;
+		width: 100%; height: 11vh;
+		background-color: #063778;
+		font-size: 40px;
+		text-align: center;
+		color: white;
+		padding-top: 30px;
+	}
+	.myNav{
+		display: block;
+		width: 100%; height: 4vh;
+		margin-top: 20px;
+		text-align: center;
+		padding-top: 20px;
+		font-size: 20px;
+		color: grey;
+		cursor: pointer;
+	}
+	.myNav:hover{
+		background-color: #063778;
+		color: white;
+	}
+
+
+	/*Main part*/
+	#main{
+		flex: 85%;
+		height: 100vh;
+		background-color: #f8fafb;
+		font-family: sans-serif;
+	}
+	#mainHead{
+		display: block;
+		width: 100%; height: 14vh;
+		background-color: white;
+	}
+	#mySearch{
+		width: 340px; height: 60px;
+		position: absolute;
+		top: 35px;
+		right: 250px;
+		background-color: #f8fafb;
+		font-size: 20px;
+		padding-left: 50px;
+		border: 1px solid #f8fafb;
+	}
+	#welcomeBox{
+		display: block;
+		width: 900px; height: 60px;
+		background-color: white;
+		margin-top: 45px;
+		margin-left: 50px;
+		font-size: 26px;
+		padding-left: 50px;
+		padding-top: 25px;
+	}
+	#langBox{
+		display: block;
+		width: 150px; height: 60px;
+		background-color: white;
+		margin-top: 60px;
+		font-size: 24px;
+		padding-left: 10px;
+		position: absolute;
+		top: 135px;
+		right: 300px;
+	}
+	h1{
+		font-size: 60px;
+		padding-left: 50px;
+	}
+	#proPic{
+		display: block;
+		width: 60px; height: 60px;
+		border: 1px solid grey;
+		border-radius: 50%;
+		background-color: #f8fafb;
+		position: absolute;
+		top: 35px;
+		right: 150px;
+	}
+</style>
+<body>
+	<div class="wrap">
+		<!-- side part -->
+		<div id="side">
+			<!-- for the logo -->
+			<div id="myHeader">
+				<img src="img/3.png" style="width: 280px; height: 140px; position: absolute; top: 0px; left: 40px;">
+			</div>
+			<!-- end of logo -->
+
+			<!-- for navigation -->
+			<div class="myNav">Dashboard</div>
+			<div class="myNav">Post</div>
+			<div class="myNav">Tutorial</div>
+			<div class="myNav">Subscribe</div>
+			<!-- end of navigation -->
+		</div>
+		<!-- End of side -->
+
+		<!-- Main part-->
+		<div id="main">
+			<!-- header of main part -->
+			<div id="mainHead">
+				<input type="text" name="search" id="mySearch" placeholder="Search">
+				<div id="proPic"></div>
+			</div>
+			<!-- end of header -->
+
+			<!-- welcome -->
+			<div id="welcomeBox">
+				Welcome to "TutorSpace"
+			</div>
+			<!-- end of welcome -->
+
+
+			<!-- dropdown -->
+			<select id="langBox">
+				<option>English</option>
+				<option>Melayu</option>
+				<option>German</option>
+				<option>Italy</option>
+			</select>
+			<!-- end of dropdown -->
+
+			<h1>Introduction</h1>
+		</div>
+		<!-- End of main-->
+	</div>
+</body>
+</html>
