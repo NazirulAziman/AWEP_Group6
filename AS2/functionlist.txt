@@ -7,3 +7,22 @@ Online Courses Website
 3. Tutorial(free)/Online video(pay)
 4. Exercises/Quizzes
 5. Profile - checking achivements from quizzes(for student) / update quizzes and answers(admin)
+
+ ##### NEW IDEA #####
+ 
+WEBSITE: PB INVENTORY 
+
+Student Loan & borrow School property (INVENTORY)
+
+5 Non-database Function Php :
+
+1. Sign-up/Login
+2. Fill in form (input)
+3. Print after submission
+4. Upload and import (drag and drop)
+5. Function add to cart (selling PB merchandise)
+
+
+
+
+
