@@ -8,7 +8,9 @@
 <link rel="stylesheet" type="text/css" href="css/index.css">
 <script type="text/javascript" src="js/index.js"></script>
 <style type="text/css">
-	
+	#nav1{
+		color: red;
+	}
 </style>
 
 <body>
@@ -21,7 +23,7 @@
 
 			<!--logo start-->
 			<div id="myLogo">
-				<img src="img/myLogo.png" id="logo">
+				<img src="img/pb1.png" id="logo" style="max-width: 340px;">
 			</div>
 			<!--logo end-->
 

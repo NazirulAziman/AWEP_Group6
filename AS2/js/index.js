@@ -6,7 +6,7 @@ function dashboard(){
 		document.getElementById("c4").style.display = "none";
 		document.getElementById("c5").style.display = "none";
 		//for color changes when click
-		document.getElementById("nav1").style.color = "yellow";
+		document.getElementById("nav1").style.color = "red";
 		document.getElementById("nav2").style.color = "grey";
 		document.getElementById("nav3").style.color = "grey";
 		document.getElementById("nav4").style.color = "grey";
@@ -21,7 +21,7 @@ function dashboard(){
 		document.getElementById("c4").style.display = "none";
 		document.getElementById("c5").style.display = "none";
 		//for color changes when click
-		document.getElementById("nav2").style.color = "yellow";
+		document.getElementById("nav2").style.color = "red";
 		document.getElementById("nav1").style.color = "grey";
 		document.getElementById("nav3").style.color = "grey";
 		document.getElementById("nav4").style.color = "grey";
@@ -36,7 +36,7 @@ function dashboard(){
 		document.getElementById("c4").style.display = "none";
 		document.getElementById("c5").style.display = "none";
 		//for color changes when click
-		document.getElementById("nav3").style.color = "yellow";
+		document.getElementById("nav3").style.color = "red";
 		document.getElementById("nav2").style.color = "grey";
 		document.getElementById("nav1").style.color = "grey";
 		document.getElementById("nav4").style.color = "grey";
@@ -51,7 +51,7 @@ function dashboard(){
 		document.getElementById("c2").style.display = "none";
 		document.getElementById("c5").style.display = "none";
 		//for color changes when click
-		document.getElementById("nav4").style.color = "yellow";
+		document.getElementById("nav4").style.color = "red";
 		document.getElementById("nav2").style.color = "grey";
 		document.getElementById("nav3").style.color = "grey";
 		document.getElementById("nav1").style.color = "grey";
@@ -66,7 +66,7 @@ function dashboard(){
 		document.getElementById("c4").style.display = "none";
 		document.getElementById("c2").style.display = "none";
 		//for color changes when click
-		document.getElementById("nav5").style.color = "yellow";
+		document.getElementById("nav5").style.color = "red";
 		document.getElementById("nav2").style.color = "grey";
 		document.getElementById("nav3").style.color = "grey";
 		document.getElementById("nav4").style.color = "grey";
