@@ -6,54 +6,9 @@
 	<title>My Homepage</title>
 </head>
 <link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript" src="js/index.js"></script>
 <style type="text/css">
-	#logo{
-		display: block;
-		max-width: 300px;
-		margin-left: auto; margin-right: auto;
-	}
-	#profile{
-		display: block;
-		width: 90%; height: 90%;
-		margin-top: 4px;
-		border-radius: 50%;
-		margin-left: auto; margin-right: auto;
-	}
-	#profile:hover{
-		cursor: pointer;
-	}
-	#c1{
-		display: block;
-		width: 95%; height: 80vh;
-		margin: auto; margin-top: 30px;
-	}
-
-	#c2,#c3,#c4,#c5{
-		display: none;
-		width: 95%; height: 80vh;
-		margin: auto; margin-top: 30px;
-	}
-	.welcome{
-		display: block;
-		width: 1000px; height: 650px;
-		border: 1px solid #F1F1F1;
-		background-color: #F1F1F1;
-		border-radius: 20px;
-		box-shadow: 0px 3px 2px 3px #888888;
-		padding-left: 20px; padding-top: 10px;
-	}
-	#selection{
-		display: block;
-		width: 200px; height: 4vh;
-		border: 1px solid black;
-		margin-top: 30px;
-	}
-	#myPic{
-		display: block;
-		max-width: 550px;
-		border: 1px solid grey;
-		border-radius: 10px;
-	}
+	
 </style>
 
 <body>
@@ -71,11 +26,11 @@
 			<!--logo end-->
 
 			<!--my navigation list start-->
-			<div class="nav" onclick="dashboard()">Dashboard</div>
-			<div class="nav" onclick="loan()">Loan</div>
-			<div class="nav" onclick="borrow()">Borrow Inventory</div>
-			<div class="nav" onclick="merchandise()">Merchandise</div>
-			<div class="nav" onclick="approval()">Approval</div>
+			<div class="nav" id="nav1" onclick="dashboard()">Dashboard</div>
+			<div class="nav" id="nav2" onclick="loan()">Loan</div>
+			<div class="nav" id="nav3" onclick="borrow()">Borrow Inventory</div>
+			<div class="nav" id="nav4" onclick="merchandise()">Merchandise</div>
+			<div class="nav" id="nav5" onclick="approval()">Approval</div>
 			<!--my navigation list end-->
 
 		</div>
@@ -101,7 +56,7 @@
 			<div id="c1">
 				<!--Welcome start-->
 				<div class="welcome">
-					<h2>Welcome to PB inventory system</h2>
+					<h1>Welcome to PB inventory system</h1>
 					<img src="img/bg.jpeg" id="myPic">
 					<h2 style="color: #6B6B6B;">Subtitle</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -127,7 +82,7 @@
 			<div id="c2">
 				<!--Welcome start-->
 				<div class="welcome">
-					<h2>Loan</h2>
+					<h2>Loan Application Form</h2>
 				</div>
 				<!--Welcome end-->
 			</div>
@@ -172,45 +127,3 @@
 
 
 </html>
-
-<script type="text/javascript">
-	function dashboard(){
-		document.getElementById("c1").style.display = "block";
-		document.getElementById("c2").style.display = "none";
-		document.getElementById("c3").style.display = "none";
-		document.getElementById("c4").style.display = "none";
-		document.getElementById("c5").style.display = "none";
-	}
-
-	function loan(){
-		document.getElementById("c2").style.display = "block";
-		document.getElementById("c1").style.display = "none";
-		document.getElementById("c3").style.display = "none";
-		document.getElementById("c4").style.display = "none";
-		document.getElementById("c5").style.display = "none";
-	}
-
-	function borrow(){
-		document.getElementById("c3").style.display = "block";
-		document.getElementById("c1").style.display = "none";
-		document.getElementById("c2").style.display = "none";
-		document.getElementById("c4").style.display = "none";
-		document.getElementById("c5").style.display = "none";
-	}
-
-	function merchandise(){
-		document.getElementById("c4").style.display = "block";
-		document.getElementById("c1").style.display = "none";
-		document.getElementById("c3").style.display = "none";
-		document.getElementById("c2").style.display = "none";
-		document.getElementById("c5").style.display = "none";
-	}
-
-	function approval(){
-		document.getElementById("c5").style.display = "block";
-		document.getElementById("c1").style.display = "none";
-		document.getElementById("c3").style.display = "none";
-		document.getElementById("c4").style.display = "none";
-		document.getElementById("c2").style.display = "none";
-	}
-</script>
