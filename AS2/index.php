@@ -80,6 +80,7 @@
 <body>
 	<!--medium size box start-->
 	<div id="loginBox">
+		
 		<!--form for login to next page start-->
 		<form action="homepage.php" method="post">
 			<!--logo image start-->
@@ -97,11 +98,8 @@
 					<div class="icons">
 						<img src="img/icons1.png" style="max-width: 20px; margin-top: 10px;">
 					</div> 
-					<input type="text" name="username" placeholder="Enter your username" autocomplete="off">
+					<input type="text" id="uname" name="username" placeholder="Enter your username" autocomplete="off">
 				</div>
-				<!--username end-->
-
-				<!--password start-->
 				<div class="inputBox">
 					<div class="icons">
 						<img src="img/icons2.png" style="max-width: 20px; margin-top: 10px;">
@@ -113,6 +111,13 @@
 				<!--login button start-->
 				<button type="submit" id="myBtn">Log In</button>
 				<!--login button end-->
+
+				<!--login function start-->
+
+				<!--login function end-->
+				
+				
+				
 			</div>
 			<!--login info end-->
 		</form>

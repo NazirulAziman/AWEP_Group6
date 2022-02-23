@@ -81,3 +81,39 @@ function dashboard(){
 		document.getElementById("myApp2").style.display = "inline-block";
 		document.getElementById("myApp1").style.display = "none";
 	}
+
+	//////////////////////////////////////////////////////////////////////////////////
+	function pressone(){
+	//for add to cart 
+	document.getElementById("item1").style.display = "block";
+	}
+	function presstwo(){
+	//for add to cart 
+	document.getElementById("item2").style.display = "block";
+	}
+	function pressthree(){
+	//for add to cart 
+	document.getElementById("item3").style.display = "block";
+	}
+	function pressfour(){
+	//for add to cart 
+	document.getElementById("item4").style.display = "block";
+	}
+	//////////////////////////////////////////////////////////////////////////////////
+	function cancelone(){
+	//to cancel add to cart 
+	document.getElementById("item1").style.display = "none";
+	}
+	function canceltwo(){
+	//to cancel add to cart 
+	document.getElementById("item2").style.display = "none";
+	}
+	function cancelthree(){
+	//to cancel add to cart 
+	document.getElementById("item3").style.display = "none";
+	}
+	function cancelfour(){
+	//to cancel add to cart 
+	document.getElementById("item4").style.display = "none";
+	}
+	//////////////////////////////////////////////////////////////////////////////////

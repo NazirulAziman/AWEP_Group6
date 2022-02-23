@@ -7,7 +7,76 @@
 </head>
 <link rel="stylesheet" type="text/css" href="css/homepage.css">
 <script type="text/javascript" src="js/homepage.js"></script>
+<style type="text/css">
+	#myApp1,#myApp2{
+		width: 1050px;
+	}
+	#addcart{
+	display: inline-block;
+	width: 400px; height: 750px;
+	border: 1px solid #F1F1F1;
+	border-radius: 20px;
+	padding-left: 20px; padding-right: 20px;
+	box-shadow: 0px 3px 2px 3px #888888;
+	background-color: #F1F1F1;
+}
 
+.content {
+	display: inline-block;
+	width: 200px;
+	height: 280px;
+	background-color: #F1F1E3;
+	border-radius: 20px;
+	box-shadow: 0px 3px 2px 3px #888888;
+	text-align:center;
+	margin-left: 30px;
+	margin-top: 10px;
+	}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container > div {
+  border:2px solid black;
+  border-radius:10px;
+  background-color: #f1f1f1;
+  width: 380px;
+  margin: 5px;
+  line-height: 50px;
+}
+
+.addcontent {
+	float:left; 
+	width:120px; 
+	height:100px;
+	margin: 5px 5px 5px 5px;
+}
+
+.proceed {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  bottom: 80px;
+  position:fixed;
+  margin-left:130px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#item1,#item2,#item3,#item4 {
+	display: none;
+}
+
+.cancelbutton {
+	background-color: red; 
+	color: white;
+}
+</style>
+	
 <body>
 
 	<!--whole start-->
@@ -95,11 +164,11 @@
 				<!--Application form page 1 start-->
 				<div id="myApp1">
 					<h2>Student Personal Information Section</h2>
-					<form action="" method="POST">
+					<form action="loan.php" method="POST">
 						<input type="text" name="fname" placeholder="Enter your fullname" class="appInput"> &nbsp;
 						<input type="text" name="id" placeholder="Enter your student ID" class="appInput"> &nbsp;
 						<br><br>
-						<select class="appInput">
+						<select class="appInput" id="gender" name="gender">
 							<option value="0">-- Select Gender --</option>
 							<option value="Male">Male</option>
 							<option value="Female">Female</option>
@@ -109,10 +178,10 @@
 						<br><br>
 						<input type="text" name="course" placeholder="Enter Your Courses" class="appInput"> &nbsp;
 						<input type="number" name="intake" placeholder="Intake" class="appInput" id="intake" min="8" max="11"> &nbsp;
-						<label class="forLabel">Graduation: </label><input type="date" name="intake" placeholder="Enter Your Intake" class="appInput" id="date">
+						<label class="forLabel">Graduation: </label><input type="date" name="date" placeholder="Enter Your Intake" class="appInput" id="date">
 						<br><br>
 						<input type="text" name="ic" placeholder="Enter Your IC Number" class="appInput"> &nbsp;
-						<select class="appInput" id="ic">
+						<select class="appInput" id="color">
 							<option value="0">-- IC Color --</option>
 							<option value="Yellow">Yellow</option>
 							<option value="Purple">Purple</option>
@@ -121,16 +190,16 @@
 						</select> &nbsp;
 						<input type="text" name="ct" placeholder="Enter Your Citizenship" class="appInput"> &nbsp;
 						<br><br>
-						<textarea id="myAddress" placeholder="Enter Your Address"></textarea>
+						<textarea id="myAddress" name="myAddress" placeholder="Enter Your Address"></textarea>
 						<br><br>
 						<input type="text" name="num" placeholder="Enter Your Contact Number" class="appInput"> &nbsp;
 						<input type="email" name="email" placeholder="Enter Your Email Address" class="appInput"> &nbsp;
 						<br><br>
 						<h2>Student Bank Information Section</h2>
-						<input type="text" name="num" placeholder="Enter Your Account Name" class="appInput" id="acc"> &nbsp;
-						<input type="text" name="num" placeholder="Enter Your Account Number" class="appInput" id="acc"> &nbsp;
+						<input type="text" name="accName" placeholder="Enter Your Account Name" class="appInput" id="acc"> &nbsp;
+						<input type="text" name="accNum" placeholder="Enter Your Account Number" class="appInput" id="acc"> &nbsp;
 						<br><br>
-						<input type="text" name="num" placeholder="Enter Your Bank Name" class="appInput" value="BIBD At-Tamwil">
+						<input type="text" name="bank" placeholder="Enter Your Bank Name" class="appInput" value="BIBD At-Tamwil">
 						<br><br>
 				</div>
 				<!--Application form page 1 end-->
@@ -193,25 +262,25 @@
 				<!--Welcome start-->
 				<div class="welcome" id="myDetails">
 					<h2>Borrower Details Section</h2>
-					<form action="" method="POST">
+					<form action="borrow.php" method="POST">
 						<input type="text" name="fname" placeholder="Enter your fullname" class="appInput"> &nbsp;
 						<input type="text" name="contact" placeholder="Enter your Contact Number" class="appInput"> &nbsp;
 						<br><br>
-						<textarea id="myAddress" placeholder="Enter Your Address"></textarea>
+						<textarea id="myAddress" name="myAddress" placeholder="Enter Your Address"></textarea>
 						<br><br>
 						<input type="email" name="email" placeholder="Enter your Email Address" class="appInput"> &nbsp;
-						<select class="appInput" id="dept">
+						<select class="appInput" id="dept" name="dept">
 							<option value="0">-- Department --</option>
 							<option value="Lecturer">Lecturer</option>
 							<option value="Student">Student</option>
 						</select> &nbsp;
 					<h2>Optional For Student Details Section</h2>
-						<input type="text" name="course" placeholder="Enter Your Courses" class="appInput"> &nbsp;
-						<input type="number" name="intake" placeholder="Intake" class="appInput" id="intake" min="8" max="11"> &nbsp;
-						<label class="forLabel">Graduation: </label><input type="date" name="intake" placeholder="Enter Your Intake" class="appInput" id="date">
+						<input type="text" name="course" placeholder="Enter Your Courses" class="appInput" value="-"> &nbsp;
+						<input type="number" name="intake" placeholder="Intake" class="appInput" id="intake" min="8" max="11" value="-"> &nbsp;
+						<label class="forLabel">Graduation: </label><input type="date" name="date" placeholder="Enter Your Intake" class="appInput" id="date" value="-">
 						<br><br>
 					<h2>Item Details Section</h2>
-						<select class="appInput" id="item">
+						<select class="appInput" id="item" name="item">
 							<option value="0">-- Pick Item --</option>
 							<option value="Laptop">Laptop</option>
 							<option value="Tablet">Tablet</option>
@@ -224,8 +293,8 @@
 						<input type="text" name="use" placeholder="Intended Use" class="appInput"> &nbsp;
 						<input type="text" name="where" placeholder="Where this item be used?" class="appInput"> &nbsp;
 						<br><br>
-						<label class="forLabel">Date needed: </label><input type="date" name="intake" placeholder="Enter Your Intake" class="appInput" id="date">
-						<select class="appInput" id="duration">
+						<label class="forLabel">Date needed: </label><input type="date" name="date1" placeholder="Enter Your Intake" class="appInput" id="date">
+						<select class="appInput" id="duration" name="duration">
 							<option value="0">-- Pick Your Durations --</option>
 							<option value="1 Day">1 Day</option>
 							<option value="1 Week">1 Week</option>
@@ -247,11 +316,67 @@
 
 			<!--content 4 start-->
 			<div id="c4">
-				<!--Welcome start-->
-				<div class="welcome">
-					<h2>Merchandise</h2>
+				<!--bigBox start-->
+				<div id="bigBox">
+
+					<!--merchandise box start-->
+					<div id="myApp1">
+						<h2>PB Merchandise</h2>
+						<div>
+							<div class="content">
+							<img src="img/notebook.png">
+							<p><b>Book</b><br>$5.00</p>
+							<button onclick="pressone()" style="background-color: blue; width: 100px; height:20px; color: white;">Add to Cart</button>
+							</div>
+							<div class="content">
+							<img src="img/file.png">
+							<p><b>File</b><br>$2.00</p>
+							<button onclick="presstwo()" style="background-color: blue; width: 100px; height:20px; color: white;">Add to Cart</button>
+							</div>
+							<div class="content">
+							<img src="img/pen.png">
+							<p><b>Pen</b><br>$6.00</p>
+							<button onclick="pressthree()" style="background-color: blue; width: 100px; height:20px; color: white;">Add to Cart</button>
+							</div>
+							<div class="content">
+							<img src="img/shirt.png">
+							<p><b>Shirt</b><br>$20.00</p>
+							<button onclick="pressfour()" style="background-color: blue; width: 100px; height:20px; color: white;">Add to Cart</button>
+							</div>
+						</div>
+					</div>
+					<!--merchandise box end-->
+				
+					<!--add to cart box start-->
+					<div id="addcart">
+						<form action="merchandise.php" method="POST">
+						<h2>My Cart</h2>
+						<div class="flex-container">
+  							<div id="item1">
+							  <img src="img/notebook.png" class="addcontent">
+							  <p><b>Notebook</b> $5.00<br><button onclick="cancelone()" class="cancelbutton">Cancel</button></p>
+							</div>
+  							<div id="item2">
+							  <img src="img/file.png" class="addcontent">
+							  <p><b>File</b> $2.00<br><button onclick="canceltwo()" class="cancelbutton">Cancel</button></p>
+							</div>
+  							<div id="item3">
+							  <img src="img/pen.png" class="addcontent">
+							  <p><b>Pen</b> $6.00<br><button onclick="cancelthree()" class="cancelbutton">Cancel</button></p>
+							</div>
+							<div id="item4">
+								<img src="img/shirt.png" class="addcontent">
+								<p><b>Shirt</b> $20.00<br><button onclick="cancelfour()" class="cancelbutton">Cancel</button></p>
+							</div>  
+						</div>
+						<button type="submit" class="proceed" name="submit">Proceed</button>
+						</form>
+
+					</div>
+					<!--add to cart box end-->
+
 				</div>
-				<!--Welcome end-->
+				<!--bigBox end-->
 			</div>
 			<!--content 4 end-->
 

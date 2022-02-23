@@ -145,7 +145,7 @@ body{
 	}
 	#myApp1,#myApp2{
 		display: inline-block;
-		width: 900px; height: 700px;
+		width: 1050px; height: 700px;
 		border: 1px solid #F1F1F1;
 		border-radius: 20px;
 		margin-right: 30px;
