@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+<?php
+$item1 = "Book";
+$item2 = "Pen";
+$item3 = "Shirt";
+
+$price1 = "$5.00";
+$price2 = "$6.00";
+$price3 = "$20.00";
+
+$discription1 = "A5 Size with 300 pages";
+$discription2 = "Blue ink pens x3";
+$discription3 = "Short Sleeve (Available size XS to XXL)";
+?>
+
+<DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -38,6 +52,7 @@
 		width: 300px; height: 40px;
 		font-size: 20px;
 		margin-top: 50px;
+		margin-left: 820px;
 	}
 	.mySubmit1:hover{
 		cursor: pointer;
@@ -63,14 +78,20 @@
 	h3{
 		font-size: 24px;
 	}
+
+	img {
+		width:  250px;
+		height: 150px;
+	}
 </style>
 <body>
 	<!--big Box start-->
 	<div id="formBox">
 		<!--header start-->
 		<div id="boxHeader">
-			<h2>Thank you for submitting your request, We will get in touch as soon as possible</h2>
+			<h2>Thank you for purchasing, can bring this form to PB administrator</h2>
 		</div>
+		<img src="img/pblogo.png">
 		<!--header end-->
 		<?php
 			if(isset($_POST['submit'])){
@@ -91,27 +112,63 @@
 			<tr>
 				<td>
 					<?php
-					echo $_POST['items'];
+					echo $item1;
 					?>
 				</td>
 				<td>
 					<?php
-					echo $_POST['name'];
+					echo $price1;
 					?>
 				</td>
 				<td>
 					<?php
-					echo $_POST['name'];
+					echo $discription1;
+					?>
+				</td>
+			</tr>
+			<!--row 2 end-->
+			<tr>
+				<td>
+					<?php
+					echo $item2;
+					?>
+				</td>
+				<td>
+					<?php
+					echo $price2;
+					?>
+				</td>
+				<td>
+					<?php
+					echo $discription2;
+					?>
+				</td>
+			</tr>
+			<!--row 3 end-->
+			<tr>
+				<td>
+					<?php
+					echo $item3;
+					?>
+				</td>
+				<td>
+					<?php
+					echo $price3;
+					?>
+				</td>
+				<td>
+					<?php
+					echo $discription3;
 					?>
 				</td>
 			</tr>
 
 		</table>
-		<!--going back button start-->
-		<form action="index.php" method="POST">
-			<button type="submit" class="mySubmit1">To Login Page</button>
-		</form>
-		<!--going back button end-->
+		<br>
+		<p><b>Block 2E, Ong Sum Ping Condominium, Jalan Ong Sum Ping, Bandar Seri Begawan, BA1311, Brunei Darussalam
+			<br><br>
+			Tel: +673 2234466 Fax: 2234469 / 2234449 Email: contact@pb.edu.bn
+		</b></p>
 		<br>
 		<?php
 			echo "Submitted on : ";
@@ -121,5 +178,10 @@
 		<!--table end-->
 	</div>
 	<!--big Box end-->
+	<!--going back button start-->
+	<form action="index.php" method="POST">
+			<button type="submit" class="mySubmit1">To Login Page</button>
+	</form>
+		<!--going back button end-->
 </body>
 </html>

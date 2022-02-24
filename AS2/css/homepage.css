@@ -295,3 +295,26 @@ body{
 	#myDetails{
 		height: 720px;
 	}
+
+	table,th,td{
+		border: 1px solid black;
+		margin: auto;
+		font-size: 12px;
+		padding: 10px;
+	}
+	th{
+		font-size: 14px;
+	}
+	tr:nth-child(even){
+		background-color: #f2f2f2;
+	}
+	table{
+		width: 100%;
+		border-collapse: collapse;
+		text-align: center;
+	}
+	#myTable{
+		display: block;
+		width: 1200px; height: 100px;
+		margin: auto; margin-top: 20px;
+	}

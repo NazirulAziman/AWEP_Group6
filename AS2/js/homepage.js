@@ -117,3 +117,12 @@ function dashboard(){
 	document.getElementById("item4").style.display = "none";
 	}
 	//////////////////////////////////////////////////////////////////////////////////
+
+	function tickBoxone(){
+		//to cancel add to cart 
+		document.getElementById("tickBox1").style.display = "block";
+		}
+	function tickBoxtwo(){
+		//to cancel add to cart 
+		document.getElementById("tickBox2").style.display = "block";
+		}

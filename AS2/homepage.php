@@ -1,3 +1,8 @@
+<?php
+
+$message = "Are you sure want to proceed?";
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,10 +13,11 @@
 <link rel="stylesheet" type="text/css" href="css/homepage.css">
 <script type="text/javascript" src="js/homepage.js"></script>
 <style type="text/css">
-	#myApp1,#myApp2{
-		width: 1050px;
-	}
-	#addcart{
+	
+#myApp1,#myApp2{
+	width: 1050px;
+}
+#addcart{
 	display: inline-block;
 	width: 400px; height: 750px;
 	border: 1px solid #F1F1F1;
@@ -20,7 +26,6 @@
 	box-shadow: 0px 3px 2px 3px #888888;
 	background-color: #F1F1F1;
 }
-
 .content {
 	display: inline-block;
 	width: 200px;
@@ -74,6 +79,14 @@
 .cancelbutton {
 	background-color: red; 
 	color: white;
+}
+
+td {
+	background-color: white;
+}
+
+#tickBox1, #tickBox2 {
+	display:none;
 }
 </style>
 	
@@ -222,10 +235,11 @@
 						<label class="forLabel">Date: </label><input type="date" name="ackDate" class="appInput">
 						<br><br>
 						<label class="forLabel" style="font-size: 14px;">I declare that the information provided is true. 
-						I will notify the Student Affairs Division of any changes as soon as possible</label>
-						<input type="checkbox" name="agree">
+						I will notify the Student Affairs Division of any changes as soon as possible
+						<input type="checkbox" onclick="tickBoxone()"name="agree">
+						(tick to submit)</label>
 						<br><br>
-						<button type="Submit" class="mySubmit1">Submit Your Form</button>
+						<button type="Submit" id="tickBox1" class="mySubmit1">Submit Your Form</button>
 					</form>
 				</div>
 				<!--Application form page 2 end-->
@@ -304,10 +318,11 @@
 						</select> &nbsp;
 						<br><br>
 						<label class="forLabel" style="font-size: 14px;">I declare that the information provided is true. 
-						I will notify the Student Affairs Division of any changes as soon as possible</label>
-						<input type="checkbox" name="agree">
+						I will notify the Student Affairs Division of any changes as soon as possible
+						<input type="checkbox" onclick="tickBoxtwo()" name="agree">
+						(tick to submit)</label>
 						<br><br>
-						<button type="Submit" class="mySubmit1">Submit Your Form</button>
+						<button type="Submit" id="tickBox2" class="mySubmit1">Submit Your Form</button>
 					</form>
 				</div>
 				<!--Welcome end-->
@@ -349,7 +364,6 @@
 				
 					<!--add to cart box start-->
 					<div id="addcart">
-						<form action="merchandise.php" method="POST">
 						<h2>My Cart</h2>
 						<div class="flex-container">
   							<div id="item1">
@@ -369,7 +383,12 @@
 								<p><b>Shirt</b> $20.00<br><button onclick="cancelfour()" class="cancelbutton">Cancel</button></p>
 							</div>  
 						</div>
+						<form action="merchandise.php" method="POST">
 						<button type="submit" class="proceed" name="submit">Proceed</button>
+						<script>
+						var message = '<?= $message ?>';
+						alert($message);
+						</script>
 						</form>
 
 					</div>
@@ -385,6 +404,24 @@
 				<!--Welcome start-->
 				<div class="welcome">
 					<h2>My Approval</h2>
+
+					<table>
+			<!--row 1 start-->
+			<tr>
+				<th>Item</th>
+				<th>Type</th>
+				<th>Status</th>
+				<th>File</th>
+			</tr>
+			<!--row 1 end-->
+			<tr>
+				<td style="font-size:20px;">Laptop</td>
+				<td style="font-size:20px;">Borrow</td>
+				<td style="font-weight:italic; color:#FEDD21; font-size:20px;">Pending ...</td>
+				<td><button>Download</button></td>
+			</tr>
+
+		</table>
 				</div>
 				<!--Welcome end-->
 			</div>
